@@ -11,9 +11,17 @@ connectDB();
 
 const app = express();
 
+// Logging
 if (process.env.NODE_ENV === "development") {
     app.use(morgan("dev"));
 }
+
+//Setting the handle-bars extension and the layout
+app.engine('.hbs', exphbs({defaultLayout: "main", extname: '.hbs'}));
+app.set('view engine', '.hbs');
+
+// Routes
+app.use("/", require("./routes/index"));
 
 const PORT = process.env.PORT || 1999;
 
