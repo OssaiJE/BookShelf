@@ -3,6 +3,11 @@
     margin-top: 5opx;
     text-align: center;
 }
+
 p {
     margin: 10px 0 !important;
+}
+
+.fa-small {
+    font-size: 18px !important;
 }
