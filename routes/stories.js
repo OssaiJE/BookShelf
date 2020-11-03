@@ -62,7 +62,7 @@ router.get("/edit/:id", ensureAuth, async (req, res) => {
 
 // @desc Update story
 // @route PUT /stories/:id
-router.get("/:id", ensureAuth, async (req, res) => {
+router.post("/:id", ensureAuth, async (req, res) => {
     let story = await Story.findById(req.params.id).lean();
     if (!story) {
         return res.render("error/404");
@@ -77,4 +77,5 @@ router.get("/:id", ensureAuth, async (req, res) => {
         res.redirect("/dashboard");
     }
 });
+
 module.exports = router;
