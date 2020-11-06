@@ -1,7 +1,7 @@
 {
-  "name": "bookstore",
+  "name": "bookshelf",
   "version": "2.2.1",
-  "description": "A book store node app that enables creations and reading of books",
+  "description": "A book shelf node app that enables creations and reading of books",
   "main": "index.js",
   "scripts": {
     "start": "cross-env NODE_ENV=production node index",
